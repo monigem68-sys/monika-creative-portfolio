@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyan">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONIKA — Creative Developer &amp; UI/UX Designer | Portfolio</title>
+  
+  <meta name="description" content="Award-winning portfolio template for MONIKA — CSE student, creative developer, and UI/UX designer. Crafted for BEXO TEMPLATE WARS." />
+  <meta name="keywords" content="Monika, Portfolio, UI/UX, Creative Developer, Three.js, Flask, Python, Web Design, BEXO Template Wars" />
+  <meta name="author" content="Monika" />
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Three.js CDN (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to Main Content</a>
+
+  <!-- Ambient Visual Background Layers -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+  <!-- Fluid Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-text" id="cursor-text" aria-hidden="true"></div>
+
+  <!-- FLOATING / STICKY GLASS NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-logo">MONIKA<span class="dot">.</span></span>
+        <div class="brand-status-badge">
+          <span class="status-dot-pulse" aria-hidden="true"></span>
+          <span>AVAILABLE FOR CREATIVE PROJECTS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#work" class="nav-link">WORK</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#skills" class="nav-link">SKILLS</a></li>
+        <li><a href="#lab" class="nav-link">LAB</a></li>
+        <li><a href="#journey" class="nav-link">JOURNEY</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+
+      <!-- Action Controls: Audio + Accent Palette Switcher -->
+      <div class="nav-actions">
+        <!-- Audio SFX Toggle -->
+        <button class="btn-control" id="btn-sound-toggle" title="Toggle UI Audio SFX" aria-label="Toggle UI Audio SFX">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Accent Color Switcher -->
+        <div class="accent-switcher" title="Select Accent Palette" role="group" aria-label="Accent Palette Switcher">
+          <button class="color-dot cyan active" data-color="cyan" title="Electric Cyan" aria-label="Electric Cyan"></button>
+          <button class="color-dot lime" data-color="lime" title="Hyper Lime" aria-label="Hyper Lime"></button>
+          <button class="color-dot violet" data-color="violet" title="Neon Violet" aria-label="Neon Violet"></button>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Drawer -->
+  <div class="mobile-menu-drawer" id="mobile-menu-drawer" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#work" class="mobile-nav-link">WORK</a></li>
+      <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
+      <li><a href="#skills" class="mobile-nav-link">SKILLS</a></li>
+      <li><a href="#lab" class="mobile-nav-link">LAB</a></li>
+      <li><a href="#journey" class="mobile-nav-link">JOURNEY</a></li>
+      <li><a href="#contact" class="mobile-nav-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text & CTAs -->
+          <div class="hero-content reveal-stagger is-revealed">
+            <div class="hero-tagline-badge">
+              <span class="dot">•</span>
+              <span>UI/UX • WEB DEVELOPMENT • AI • CREATIVE TECHNOLOGY</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="title-line"><span class="kinetic-text">DESIGNING</span></span>
+              <span class="title-line"><span class="kinetic-text text-accent">DIGITAL</span></span>
+              <span class="title-line"><span class="kinetic-text">EXPERIENCES.</span></span>
+            </h1>
+
+            <p class="hero-description">
+              I create thoughtful digital experiences where design, technology and ideas meet. Transforming complex engineering into seamless human interfaces.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-primary btn-magnetic">
+                <span>EXPLORE MY WORK</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-magnetic">
+                <span>LET'S CONNECT</span>
+              </a>
+            </div>
+
+            <!-- Mobile metadata chip row -->
+            <div class="hero-meta-container-mobile">
+              <div class="hero-metadata-badge">
+                <span class="status-dot-pulse"></span>
+                <span>AVAILABLE FOR CREATIVE PROJECTS</span>
+              </div>
+              <div class="hero-metadata-badge">
+                <span>BASED IN INDIA</span>
+                <span class="text-accent" id="hero-clock">19:12 IST</span>
+              </div>
+              <div class="hero-metadata-badge">
+                <span>CSE STUDENT • 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero 3D Interactive WebGL Element -->
+          <div class="hero-visual-wrapper">
+            <!-- Floating Technical Badges -->
+            <div class="hero-metadata-badge hero-meta-1">
+              <span class="status-dot-pulse"></span>
+              <span>AVAILABLE FOR CREATIVE PROJECTS</span>
+            </div>
+            <div class="hero-metadata-badge hero-meta-2">
+              <span>BASED IN INDIA •</span>
+              <span class="text-accent" id="hero-clock-meta">19:12 IST</span>
+            </div>
+            <div class="hero-metadata-badge hero-meta-3">
+              <span>CSE STUDENT // 2026</span>
+            </div>
+
+            <!-- WebGL 3D Interactive Canvas -->
+            <div id="hero-canvas-container" title="Interactive 3D wireframe mesh reacting to cursor"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KINETIC SCROLLING TEXT MARQUEE -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-content">
+        <span class="marquee-item">CREATIVE TECHNOLOGY <span class="dot"></span></span>
+        <span class="marquee-item">UI/UX DESIGN <span class="dot"></span></span>
+        <span class="marquee-item">FULLSTACK DEVELOPMENT <span class="dot"></span></span>
+        <span class="marquee-item">AI INTEGRATION <span class="dot"></span></span>
+        <span class="marquee-item">INNOVATION &amp; CODE <span class="dot"></span></span>
+        <span class="marquee-item">BEXO TEMPLATE WARS <span class="dot"></span></span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee-item">CREATIVE TECHNOLOGY <span class="dot"></span></span>
+        <span class="marquee-item">UI/UX DESIGN <span class="dot"></span></span>
+        <span class="marquee-item">FULLSTACK DEVELOPMENT <span class="dot"></span></span>
+        <span class="marquee-item">AI INTEGRATION <span class="dot"></span></span>
+        <span class="marquee-item">INNOVATION &amp; CODE <span class="dot"></span></span>
+        <span class="marquee-item">BEXO TEMPLATE WARS <span class="dot"></span></span>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         01 / ABOUT SECTION
+         ==================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-label">01 / ABOUT</div>
+          <h2 class="section-title">ENGINEERING CRAFT &amp; HUMAN DESIGN.</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Editorial Bio & Metrics -->
+          <div class="about-text-column reveal-stagger">
+            <h3 class="about-editorial-statement">
+              “I TURN IDEAS INTO <span>DIGITAL EXPERIENCES.</span>”
+            </h3>
+
+            <div class="about-bio">
+              <p>
+                I am a Computer Science Engineering student and UI/UX designer blending technological rigour with high-level visual aestheticism. My focus lies at the intersection of creative frontends, scalable Python/Flask architectures, and practical AI applications.
+              </p>
+              <p>
+                Rather than treating design and software engineering as isolated disciplines, I approach every digital product as a unified sensory system: clean code on the inside, unforgettable interaction on the outside.
+              </p>
+            </div>
+
+            <!-- Dynamic Animated Stat Counters -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number" data-target="3" data-suffix="+">03+</div>
+                <div class="stat-label">PROJECTS</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="4" data-suffix="+">04+</div>
+                <div class="stat-label">TECHNOLOGIES</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="1" data-suffix="">01</div>
+                <div class="stat-label">CREATIVE MIND</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="2026" data-suffix="">2026</div>
+                <div class="stat-label">BUILDING &amp; LEARNING</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Holographic Profile HUD Card -->
+          <div class="about-visual-column reveal-fade">
+            <div class="hologram-profile-card" title="Hover to tilt and inspect holographic credentials">
+              <div class="card-hud-header">
+                <span class="hud-tag">// ID_SPEC: MONIKA_DEV</span>
+                <span class="hud-code">SEC-CLASS: A1</span>
+              </div>
+
+              <div class="profile-avatar-wrapper">
+                <div class="profile-avatar-art">
+                  <div class="profile-avatar-art-inner">M</div>
+                </div>
+              </div>
+
+              <div class="profile-hud-data">
+                <div class="hud-data-item">
+                  <div class="hud-data-label">OPERATOR</div>
+                  <div class="hud-data-value">MONIKA</div>
+                </div>
+                <div class="hud-data-item">
+                  <div class="hud-data-label">DISCIPLINE</div>
+                  <div class="hud-data-value">CREATIVE TECH &amp; UI/UX</div>
+                </div>
+                <div class="hud-data-item">
+                  <div class="hud-data-label">DEGREE / YEAR</div>
+                  <div class="hud-data-value">B.E. CSE • 2026</div>
+                </div>
+                <div class="hud-data-item">
+                  <div class="hud-data-label">SYSTEM KERNEL</div>
+                  <div class="hud-data-value text-accent">BEXO_OS // v2.6</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02 / SKILLS SECTION
+         ==================================================================== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-label">02 / SKILLS</div>
+          <h2 class="section-title">TECHNICAL &amp; DESIGN ARSENAL.</h2>
+          <p class="section-subtitle">
+            Beyond mundane progress bars. An interactive matrix of technologies, craft disciplines, and tools mastered.
+          </p>
+        </div>
+
+        <div class="skills-matrix reveal-stagger">
+          <!-- Skill Card 1: UI/UX DESIGN -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                </svg>
+              </div>
+              <span class="skill-index">01</span>
+            </div>
+            <h3 class="skill-name">UI/UX DESIGN</h3>
+            <p class="skill-desc">Wireframing, typography hierarchies, design systems, micro-interactions, and Figma interactive prototypes.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Design Systems</span>
+              <span class="skill-pill">User Flows</span>
+              <span class="skill-pill">Heuristic Audit</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: HTML / CSS -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-index">02</span>
+            </div>
+            <h3 class="skill-name">HTML / CSS</h3>
+            <p class="skill-desc">Semantic HTML5, CSS custom properties, responsive CSS Grid, Flexbox, glassmorphism, and hardware-accelerated animations.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">Modern CSS3</span>
+              <span class="skill-pill">CSS Grid</span>
+              <span class="skill-pill">Keyframes</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: JAVASCRIPT -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="4"></rect>
+                  <line x1="8" y1="16" x2="8" y2="12"></line>
+                  <line x1="16" y1="16" x2="16" y2="10"></line>
+                </svg>
+              </div>
+              <span class="skill-index">03</span>
+            </div>
+            <h3 class="skill-name">JAVASCRIPT</h3>
+            <p class="skill-desc">ES6+ async/await, DOM APIs, IntersectionObserver, canvas manipulation, Web Audio API, and custom cursor physics.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">ES6+</span>
+              <span class="skill-pill">Web Audio</span>
+              <span class="skill-pill">Canvas 2D</span>
+              <span class="skill-pill">Async Event Loops</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: PYTHON -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                </svg>
+              </div>
+              <span class="skill-index">04</span>
+            </div>
+            <h3 class="skill-name">PYTHON</h3>
+            <p class="skill-desc">Algorithmic problem solving, data processing, backend scripting, automation, and machine learning pipelines.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">Python 3.11</span>
+              <span class="skill-pill">Algorithms</span>
+              <span class="skill-pill">OOP</span>
+              <span class="skill-pill">Data Pipelines</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: FLASK -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 2v7.31"></path>
+                  <path d="M14 9.3V2"></path>
+                  <path d="M8.5 2h7"></path>
+                  <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+                </svg>
+              </div>
+              <span class="skill-index">05</span>
+            </div>
+            <h3 class="skill-name">FLASK</h3>
+            <p class="skill-desc">Lightweight microservice architecture, Jinja templating, routing, session security, and RESTful endpoint design.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">Jinja2</span>
+              <span class="skill-pill">Blueprints</span>
+              <span class="skill-pill">Session Auth</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 6: DATABASE -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <span class="skill-index">06</span>
+            </div>
+            <h3 class="skill-name">DATABASE</h3>
+            <p class="skill-desc">Relational database normalization, SQL queries, SQLite management, and transactional integrity for web applications.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">SQLite</span>
+              <span class="skill-pill">SQL Relational</span>
+              <span class="skill-pill">CRUD Modeling</span>
+              <span class="skill-pill">Indexing</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 7: CLOUD -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <span class="skill-index">07</span>
+            </div>
+            <h3 class="skill-name">CLOUD</h3>
+            <p class="skill-desc">Cloud hosting fundamentals, Git/GitHub CI/CD workflows, server configurations, and deployment observability.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">Git / GitHub</span>
+              <span class="skill-pill">Vercel / Render</span>
+              <span class="skill-pill">CI/CD</span>
+              <span class="skill-pill">Linux Basics</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 8: AI -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <span class="skill-index">08</span>
+            </div>
+            <h3 class="skill-name">AI &amp; INTELLIGENCE</h3>
+            <p class="skill-desc">Applied machine learning algorithms, NLP clustering, prompt engineering, agentic interactions, and LLM integrations.</p>
+            <div class="skill-tags">
+              <span class="skill-pill">NLP Clustering</span>
+              <span class="skill-pill">LLM Prompting</span>
+              <span class="skill-pill">Semantic Search</span>
+              <span class="skill-pill">Agentic UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         03 / SELECTED WORK (PROJECTS SHOWCASE)
+         ==================================================================== -->
+    <section id="work">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-label">03 / WORK</div>
+          <h2 class="section-title">SELECTED WORK.</h2>
+          <p class="section-subtitle">
+            Comprehensive case studies demonstrating fullstack execution, UI/UX polish, and algorithmic engineering.
+          </p>
+        </div>
+
+        <div class="projects-container">
+          <!-- Project 01: UNIIND CONNECT -->
+          <article class="project-panel reveal-fade" id="project-uniind">
+            <div class="project-visual-side btn-open-case" data-project-id="uniind">
+              <div class="project-mockup-wrapper">
+                <img src="assets/images/mockup-uniind.svg" alt="UNIIND CONNECT AI Platform Mockup" class="project-mockup-img" loading="lazy" />
+                <div class="project-visual-overlay"></div>
+              </div>
+            </div>
+            <div class="project-info-side">
+              <div class="project-meta-row">
+                <span class="project-number">01</span>
+                <span class="project-category">AI • FLASK • PYTHON • UI/UX</span>
+              </div>
+              <h3 class="project-title">UNIIND CONNECT</h3>
+              <p class="project-description">
+                An AI-powered societal challenge and collaborative problem-solving platform connecting civic stakeholders with academic researchers and verified mentors.
+              </p>
+              <div class="project-tech-tags">
+                <span class="project-tag">AI Clustering</span>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">UI/UX Design</span>
+              </div>
+              <button class="project-link-btn btn-open-case" data-project-id="uniind">
+                <span>VIEW CASE STUDY</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 02: ONLINE COMPLAINT MANAGEMENT SYSTEM -->
+          <article class="project-panel reveal-fade" id="project-complaint">
+            <div class="project-visual-side btn-open-case" data-project-id="complaint-system">
+              <div class="project-mockup-wrapper">
+                <img src="assets/images/mockup-complaint.svg" alt="Online Complaint Management System Mockup" class="project-mockup-img" loading="lazy" />
+                <div class="project-visual-overlay"></div>
+              </div>
+            </div>
+            <div class="project-info-side">
+              <div class="project-meta-row">
+                <span class="project-number">02</span>
+                <span class="project-category">FLASK • SQLITE • HTML • CSS • JS</span>
+              </div>
+              <h3 class="project-title">ONLINE COMPLAINT MANAGEMENT SYSTEM</h3>
+              <p class="project-description">
+                A digital grievance management platform featuring strict role-based workflows, automated SLA timers, and transparent resolution auditing.
+              </p>
+              <div class="project-tech-tags">
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">SQLite</span>
+                <span class="project-tag">Role-Based Access</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <button class="project-link-btn btn-open-case" data-project-id="complaint-system">
+                <span>VIEW CASE STUDY</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 03: CREATIVE WEB EXPERIENCE -->
+          <article class="project-panel reveal-fade" id="project-creative">
+            <div class="project-visual-side btn-open-case" data-project-id="creative-exp">
+              <div class="project-mockup-wrapper">
+                <img src="assets/images/mockup-creative.svg" alt="Creative Web Experience Interface Mockup" class="project-mockup-img" loading="lazy" />
+                <div class="project-visual-overlay"></div>
+              </div>
+            </div>
+            <div class="project-info-side">
+              <div class="project-meta-row">
+                <span class="project-number">03</span>
+                <span class="project-category">THREE.JS • WEBGL • CREATIVE CODE</span>
+              </div>
+              <h3 class="project-title">CREATIVE WEB EXPERIENCE</h3>
+              <p class="project-description">
+                A modern experimental interface focused on interaction, kinetic typography, and visual storytelling that bridges human curiosity with WebGL performance.
+              </p>
+              <div class="project-tech-tags">
+                <span class="project-tag">Three.js</span>
+                <span class="project-tag">WebGL</span>
+                <span class="project-tag">GLSL Shaders</span>
+                <span class="project-tag">Micro-Interactions</span>
+              </div>
+              <button class="project-link-btn btn-open-case" data-project-id="creative-exp">
+                <span>VIEW CASE STUDY</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04 / CREATIVE LAB
+         ==================================================================== -->
+    <section id="lab">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-label">04 / LAB</div>
+          <h2 class="section-title">CREATIVE LAB.</h2>
+          <p class="section-subtitle">
+            An experimental playground for interactive physics, audio-visual synthesis, glass HUDs, and algorithmic color generation.
+          </p>
+        </div>
+
+        <div class="lab-grid reveal-stagger">
+          <!-- Lab 01: Interactive Particle Gravitational Field -->
+          <div class="lab-card lab-card-1">
+            <div>
+              <div class="lab-badge">INTERACTION // PHYSICS</div>
+              <h3 class="lab-title">Particle Gravitational Mesh</h3>
+              <p class="lab-desc">Real-time particle dynamics reacting with spring repulsion to cursor coordinates.</p>
+            </div>
+            <div class="lab-interactive-area" title="Move cursor here to repel particles">
+              <canvas id="lab-canvas-particles"></canvas>
+            </div>
+          </div>
+
+          <!-- Lab 02: Kinetic Waveform Synth -->
+          <div class="lab-card lab-card-2">
+            <div>
+              <div class="lab-badge">VISUAL DESIGN // AUDIO WAVE</div>
+              <h3 class="lab-title">Kinetic Harmonic Synth</h3>
+              <p class="lab-desc">Realtime sine wave frequency &amp; phase modulator.</p>
+            </div>
+            <div class="lab-interactive-area">
+              <canvas id="lab-canvas-waveform"></canvas>
+            </div>
+            <div class="waveform-controls">
+              <label for="wave-freq" class="font-mono" style="font-size: 0.7rem;">FREQ</label>
+              <input type="range" id="wave-freq" min="0.005" max="0.08" step="0.005" value="0.02" />
+              <label for="wave-speed" class="font-mono" style="font-size: 0.7rem;">SPD</label>
+              <input type="range" id="wave-speed" min="0.01" max="0.1" step="0.01" value="0.04" />
+            </div>
+          </div>
+
+          <!-- Lab 03: Dynamic Glass HUD Switcher -->
+          <div class="lab-card lab-card-3">
+            <div>
+              <div class="lab-badge">PROTOTYPES // GLASSMORPHISM</div>
+              <h3 class="lab-title">Glass HUD Inspector</h3>
+              <p class="lab-desc">Real-time backdrop-blur &amp; opacity parameter tuning.</p>
+            </div>
+            <div class="lab-interactive-area" id="glass-preview-box" style="backdrop-filter: blur(16px); background: rgba(18,22,28,0.65);">
+              <span class="font-mono text-accent" style="font-size: 0.75rem;" id="glass-css-display">
+                backdrop-filter: blur(16px);
+              </span>
+            </div>
+            <div class="waveform-controls" style="margin-top: 0.75rem;">
+              <label for="glass-blur" class="font-mono" style="font-size: 0.7rem;">BLUR</label>
+              <input type="range" id="glass-blur" min="4" max="32" step="2" value="16" />
+              <label for="glass-opacity" class="font-mono" style="font-size: 0.7rem;">OPACITY</label>
+              <input type="range" id="glass-opacity" min="0.2" max="0.95" step="0.05" value="0.65" />
+            </div>
+          </div>
+
+          <!-- Lab 04: AI Cyber Palette Generator -->
+          <div class="lab-card lab-card-4">
+            <div>
+              <div class="lab-badge">EXPERIMENTS // AI COLOR</div>
+              <h3 class="lab-title">Cybernetic Palette Harmonizer</h3>
+              <p class="lab-desc">Algorithmic high-contrast dark theme color schemes. Click any swatch to copy HEX.</p>
+            </div>
+            <div class="palette-boxes" id="palette-boxes-container"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <button class="btn btn-secondary btn-magnetic" id="btn-roll-palette" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;">
+                <span>ROLL PALETTE ⚡</span>
+              </button>
+              <span id="palette-toast" class="font-mono text-accent" style="font-size: 0.75rem; opacity: 0; transition: opacity 0.3s ease;">
+                Copied to clipboard!
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         05 / JOURNEY & ACHIEVEMENTS
+         ==================================================================== -->
+    <section id="journey">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-label">05 / JOURNEY</div>
+          <h2 class="section-title">TIMELINE &amp; MILESTONES.</h2>
+          <p class="section-subtitle">
+            The evolution from foundational computer science theory to high-performance creative development.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+          <!-- Interactive Scroll-Linked Timeline -->
+          <div class="timeline-track reveal-fade">
+            <div class="timeline-line">
+              <div class="timeline-line-fill"></div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="timeline-step active">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">2024</div>
+              <div class="timeline-role">STARTED BUILDING</div>
+              <p class="timeline-text">
+                Immersed in core Computer Science fundamentals: data structures, object-oriented programming, and foundational UI design principles. Wrote first algorithmic pipelines and discovered the beauty of creative code.
+              </p>
+            </div>
+
+            <!-- 2025 -->
+            <div class="timeline-step active">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">2025</div>
+              <div class="timeline-role">UI/UX + DEVELOPMENT</div>
+              <p class="timeline-text">
+                Expanded into fullstack engineering with Python and Flask. Built production-ready database schemas and mastered modern component hierarchies, micro-interactions, and accessibility standards.
+              </p>
+            </div>
+
+            <!-- 2026 -->
+            <div class="timeline-step active">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">2026</div>
+              <div class="timeline-role">PROJECTS • HACKATHONS • CLOUD • AI</div>
+              <p class="timeline-text">
+                Architecting intelligent civic platforms like UNIIND CONNECT, deploying cloud architectures, exploring machine learning clustering, and competing at the highest creative tier in BEXO TEMPLATE WARS.
+              </p>
+            </div>
+
+            <!-- NOW -->
+            <div class="timeline-step">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">NOW</div>
+              <div class="timeline-role">BUILDING WHAT'S NEXT</div>
+              <p class="timeline-text">
+                Pushing the frontier of generative spatial interfaces, WebGL 3D immersion, and human-centric software for global platforms.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievements Section -->
+          <div class="achievements-box reveal-stagger">
+            <h3 class="font-display" style="font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--text-primary);">
+              KEY HONORS &amp; MILESTONES
+            </h3>
+
+            <!-- Achievement 1 -->
+            <div class="achievement-card">
+              <div class="achievement-badge-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                  <path d="M6 4h12v5a6 6 0 0 1-12 0V4z"></path>
+                </svg>
+              </div>
+              <div class="achievement-content">
+                <h4>BEXO Template Wars Finalist</h4>
+                <p>Recognized for outstanding craft, futuristic editorial aesthetics, and high-performance WebGL interactivity.</p>
+                <div class="achievement-meta">COMPETITIONS // 2026</div>
+              </div>
+            </div>
+
+            <!-- Achievement 2 -->
+            <div class="achievement-card">
+              <div class="achievement-badge-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="achievement-content">
+                <h4>National Hackathon Innovation Award</h4>
+                <p>Engineered an AI-backed civic matching platform tackling regional resource allocation.</p>
+                <div class="achievement-meta">HACKATHONS // 2025</div>
+              </div>
+            </div>
+
+            <!-- Achievement 3 -->
+            <div class="achievement-card">
+              <div class="achievement-badge-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <div class="achievement-content">
+                <h4>Fullstack &amp; Python Certification</h4>
+                <p>Completed intensive training in scalable WSGI frameworks, SQLite optimizations, and REST APIs.</p>
+                <div class="achievement-meta">CERTIFICATIONS // 2025</div>
+              </div>
+            </div>
+
+            <!-- Achievement 4 -->
+            <div class="achievement-card">
+              <div class="achievement-badge-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="achievement-content">
+                <h4>Editorial Design Systems Milestone</h4>
+                <p>Authored reusable design guidelines combining Swiss typography precision with dark cyberpunk aesthetics.</p>
+                <div class="achievement-meta">MILESTONES // 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06 / CONTACT SECTION
+         ==================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-label">06 / CONTACT</div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Editorial Contact Headline & Links -->
+          <div class="contact-text-side reveal-stagger">
+            <h2 class="contact-headline">
+              LET'S BUILD<br />
+              SOMETHING<br />
+              <span class="text-accent">MEMORABLE.</span>
+            </h2>
+
+            <p class="hero-description">
+              Have an ambitious project, creative collaboration, or competition inquiry? My inbox is always open.
+            </p>
+
+            <div class="contact-links-list">
+              <!-- Email -->
+              <a href="mailto:monika.dev.creativetech@gmail.com" class="contact-link-item">
+                <div>
+                  <div class="contact-link-title">DIRECT DISPATCH</div>
+                  <div class="contact-link-val">monika.dev.creativetech@gmail.com</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <div>
+                  <div class="contact-link-title">PROFESSIONAL NETWORK</div>
+                  <div class="contact-link-val">linkedin.com/in/monika-dev</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <div>
+                  <div class="contact-link-title">SOURCE REPOSITORIES</div>
+                  <div class="contact-link-val">github.com/monika-create</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form Card -->
+          <div class="contact-form-side reveal-fade">
+            <div class="contact-form-card">
+              <form id="portfolio-contact-form" autocomplete="off">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">YOUR NAME // ALIAS</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Rivera" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">ELECTRONIC MAIL</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@studio.design" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-scope" class="form-label">PROJECT SCOPE</label>
+                  <input type="text" id="contact-scope" class="form-input" placeholder="UI/UX, Fullstack, Creative Tech, Competition" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-msg" class="form-label">TRANSMISSION MESSAGE</label>
+                  <textarea id="contact-msg" class="form-textarea" placeholder="Tell me about your idea, timeline, and vision..." required></textarea>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="btn btn-primary btn-magnetic" style="width: 100%;">
+                  <span>START A CONVERSATION ↗</span>
+                </button>
+
+                <div class="form-feedback" id="form-feedback"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          MONIKA<span class="text-accent">.</span>
+        </div>
+
+        <div class="footer-meta">
+          DESIGN • CODE • CREATE &nbsp;|&nbsp; © 2026 MONIKA
+        </div>
+
+        <div class="footer-meta">
+          LOCAL TIME: <span id="footer-clock" class="text-accent">19:12:00 IST</span>
+        </div>
+
+        <button class="btn-back-top" id="btn-back-top" aria-label="Back to top of page">
+          <span>TOP ↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       CASE STUDY SLIDE-OVER MODAL DRAWER
+       ==================================================================== -->
+  <div class="case-modal-drawer" id="case-modal-drawer" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-content-panel">
+      <!-- Modal Navigation Bar -->
+      <div class="modal-close-bar">
+        <span class="font-mono text-accent" style="font-size: 0.75rem;" id="modal-project-cat">01 // CASE STUDY</span>
+        <button class="btn-modal-close" id="btn-modal-close" aria-label="Close Case Study Modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Header & Title -->
+      <div class="modal-header">
+        <h2 id="modal-project-title">PROJECT TITLE</h2>
+        <div class="project-tech-tags" id="modal-project-tags" style="margin-top: 1rem;"></div>
+      </div>
+
+      <!-- Mockup Display -->
+      <div class="modal-image-preview">
+        <img id="modal-project-img" src="" alt="Project Visual Preview" />
+      </div>
+
+      <!-- Overview -->
+      <div class="modal-section">
+        <div class="modal-section-title">EXECUTIVE SUMMARY</div>
+        <p id="modal-project-desc"></p>
+      </div>
+
+      <!-- Problem Statement -->
+      <div class="modal-section">
+        <div class="modal-section-title">THE CHALLENGE</div>
+        <p id="modal-project-challenge"></p>
+      </div>
+
+      <!-- Solution -->
+      <div class="modal-section">
+        <div class="modal-section-title">THE ARCHITECTURAL SOLUTION</div>
+        <p id="modal-project-solution"></p>
+      </div>
+
+      <!-- Architecture Specs -->
+      <div class="modal-section">
+        <div class="modal-section-title">SYSTEM SPECIFICATIONS</div>
+        <div class="modal-specs-grid" id="modal-project-specs"></div>
+      </div>
+
+      <!-- Bottom Action -->
+      <div style="margin-top: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; display: flex; gap: 1rem;">
+        <a href="#contact" class="btn btn-primary" onclick="document.getElementById('btn-modal-close').click();">
+          <span>DISCUSS THIS ARCHITECTURE ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/three-hero.js"></script>
+  <script src="js/lab.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
